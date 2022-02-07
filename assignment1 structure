@@ -1,0 +1,83 @@
+/* Jetti Veerraju ADC_RJY Student result */
+#include<stdio.h>
+struct student
+{
+    int sno,sub1,sub2,sub3;
+    char sname[15];
+    char group[15];
+    
+}s[10];
+
+int main()
+{
+    int i,n,tot,avg;
+    printf("Enter number of students");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        printf("\n Enter student number:");
+        scanf("%d",&s[i].sno);
+        printf("\n Enter student name:");
+        scanf("%s",s[i].sname);
+        printf("\n Enter student group:");
+        scanf("%s",s[i].group);
+        printf("\n Enter subject1 marks:");
+        scanf("%d",&s[i].sub1);
+        printf("\n Enter subject2 marks:");
+        scanf("%d",&s[i].sub2);
+        printf("\n Enter subject3 marks");
+        scanf("%d",&s[i].sub3);
+         tot=s[i].sub1+s[i].sub2+s[i].sub3;
+        avg=tot/3;
+            }
+            
+            for(i=0;i<n;i++)
+            {
+                printf("\n Student result");
+                if(s[i].sub1>=35&&s[i].sub2>=35&&s[i].sub3>=35)
+                {
+                    
+                    if(avg>=90)
+                    {
+                    printf("\n Student number: %d ",s[i].sno);
+                    printf("\n Student name:  %s ",s[i].sname);
+                    printf("\n Student group: %s ",s[i].group);
+                    printf("\n Three subjects marks: %d  %d %d",s[i].sub1,s[i].sub2,s[i].sub3);
+                    printf("Passed in distinction");
+                                    }
+                    else if(avg>=60)
+                    {
+                   printf("\n Student number: %d ",s[i].sno);
+                    printf("\n Student name:  %s ",s[i].sname);
+                    printf("\n Student group: %s ",s[i].group);
+                    printf("\n Three subjects marks:  %d  %d  %d",s[i].sub1,s[i].sub2,s[i].sub3);
+                    printf("\n Passed in first class");
+                    }
+                    else if(avg>=50)
+                    {
+                    printf("\n Student number: %d ",s[i].sno);
+                    printf("\n Student name:  %s ",s[i].sname);
+                    printf("\n Student group: %s ",s[i].group);
+                    printf("\n Three subjects marks: %d  %d %d",s[i].sub1,s[i].sub2,s[i].sub3);
+                    printf("\n Passed in second class");
+                    }
+                    
+                   else if(avg>=50)
+                    {
+                    printf("\n Student number: %d ",s[i].sno);
+                    printf("\n Student name:  %s ",s[i].sname);
+                    printf("\n Student group: %s ",s[i].group);
+                    printf("\n Three subjects marks: %d  %d %d",s[i].sub1,s[i].sub2,s[i].sub3);
+                    printf("\n Passed in third class");
+                    }
+                 else
+                 {
+                    printf("\n Student number: %d ",s[i].sno);
+                    printf("\n Student name:  %s ",s[i].sname);
+                    printf("\n Student group: %s ",s[i].group);
+                    printf("\n Three subjects marks: %d  %d %d",s[i].sub1,s[i].sub2,s[i].sub3);
+                    printf("\n Failed");
+                }} }
+                
+    return 0;
+            }
